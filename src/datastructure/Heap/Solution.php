@@ -7,11 +7,11 @@ use SplMinHeap;
 class Solution {
     public function numberGame($nums) {
         // Create a new instance of SplMinHeap to use as a priority queue
-        $pq = new SplMinHeap();
+        $minHeap = new SplMinHeap();
 
         // Insert each element of the given array $nums into the priority queue
-        foreach ($nums as $x) {
-            $pq->insert($x);
+        foreach ($nums as $num) {
+            $minHeap->insert($num);
         }
 
         // Initialize an empty array to store the result
@@ -20,11 +20,11 @@ class Solution {
         $i = 0;
 
         // Continue the loop until the priority queue is empty
-        while (!$pq->isEmpty()) {
+        while (!$minHeap->isEmpty()) {
             // Extract the smallest element from the priority queue
-            $a = $pq->extract();
+            $a = $minHeap->extract();
             // Store the next smallest element in the result array
-            $arr[$i++] = $pq->extract();
+            $arr[$i++] = $minHeap->extract();
             // Store the current smallest element in the result array
             $arr[$i++] = $a;
         }
