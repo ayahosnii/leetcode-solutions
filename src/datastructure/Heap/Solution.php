@@ -1,6 +1,8 @@
 <?php
 
-namespace src\datastructure\heap;
+namespace src\datastructure\Heap;
+
+use SplMinHeap;
 
 class Solution {
     public function numberGame($nums) {
@@ -13,7 +15,7 @@ class Solution {
         }
 
         // Initialize an empty array to store the result
-        $ans = [];
+        $arr = [];
         // Initialize a counter variable
         $i = 0;
 
@@ -22,12 +24,12 @@ class Solution {
             // Extract the smallest element from the priority queue
             $a = $pq->extract();
             // Store the next smallest element in the result array
-            $ans[$i++] = $pq->extract();
+            $arr[$i++] = $pq->extract();
             // Store the current smallest element in the result array
-            $ans[$i++] = $a;
+            $arr[$i++] = $a;
         }
 
         // Return the resulting array
-        return $ans;
+        return $arr;
     }
 }
