@@ -1,0 +1,9 @@
+{
+  "name": "ayahosni/leetcode-solutions",
+  "description": "Your description here",
+  "autoload": {
+    "psr-4": {
+      "src\\": "src/"
+    }
+  }
+}
