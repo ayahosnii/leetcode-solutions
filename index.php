@@ -16,12 +16,13 @@ $delete_greatest = new DeleteGreatest();
 
 // Define an array of input data
 $nums = [4, 2, 7, 1, 5, 3];
-$grid = [[1,2,4],[3,3,1]];
+$grid1 = [[1,2,4],[3,3,1]];
+$grid2 = [[35,52,74,92,25],[65,77,1,73,32],[43,68,8,100,84],[80,14,88,42,53],[98,69,64,40,60]];
 
 // Call the numberGame method with the input data
 //$output = $solution->numberGame($nums);
 //$output = $max_product->maxProduct($nums);
-$output = $delete_greatest->deleteGreatestValue($grid);
+$output = $delete_greatest->deleteGreatestValue($grid2);
 
 
 // Output the result
