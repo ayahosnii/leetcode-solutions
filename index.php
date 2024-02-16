@@ -2,6 +2,7 @@
 
 // Include Composer's autoloader
 
+use src\datastructure\HashTable\GoodPairs;
 use src\datastructure\Heap\DeleteGreatest;
 use src\datastructure\Heap\MaximumProduct;
 use src\datastructure\Heap\Solution;
@@ -38,4 +39,11 @@ $output = $weakest_row->kWeakestRows($mat, $k);
 
 
 // Output the result
+//print_r($output);
+######################################################################################
+#Hashtable:
+$nums = [1,2,3,1,1,3];
+$good_pairs = new GoodPairs();
+$output = $good_pairs->numIdenticalPairs($nums);
 print_r($output);
+

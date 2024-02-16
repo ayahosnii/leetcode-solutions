@@ -18,7 +18,7 @@ class GoodPairs
 
         $goodPairs = 0;
 
-        // Calculate number of good pairs using the Hashtable
+        // Calculate number of good pairs
         foreach ($hashTable as $count) {
             $goodPairs += ($count * ($count - 1)) / 2;
         }
