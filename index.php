@@ -45,5 +45,10 @@ $output = $weakest_row->kWeakestRows($mat, $k);
 $nums = [1,2,3,1,1,3];
 $good_pairs = new GoodPairs();
 $output = $good_pairs->numIdenticalPairs($nums);
-print_r($output);
+//print_r($output);
 
+#####################################################
+$jewels1 = "aA";
+$stones1 = "aAAbbbb";
+$jewelsStons = new \src\datastructure\HashTable\JewelsStones();
+echo $jewelsStons->numJewelsInStones($jewels1, $stones1) . "\n";
