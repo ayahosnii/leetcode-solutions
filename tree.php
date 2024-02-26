@@ -1,5 +1,6 @@
 <?php
 
+use src\datastructure\Tree\IncreasingOrderSearchTree;
 use src\datastructure\Tree\InsertionBST;
 use src\datastructure\Tree\RangeSumBST;
 use src\datastructure\Tree\RootEqualSumChildren;
@@ -27,13 +28,22 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 
-$root = new TreeNode(4);
-$root->left = new TreeNode(2);
+//$root = new TreeNode(4);
+//$root->left = new TreeNode(2);
+//$root->right = new TreeNode(7);
+//$root->left->left = new TreeNode(1);
+//$root->left->right = new TreeNode(3);
+//
+//
+//$searchBST = new SearchBST();
+//$subtree = $searchBST->subtreeWithVal($root, 2);
+//print_r($subtree);
+
+
+$root = new TreeNode(5);
+$root->left = new TreeNode(1);
 $root->right = new TreeNode(7);
-$root->left->left = new TreeNode(1);
-$root->left->right = new TreeNode(3);
 
-
-$searchBST = new SearchBST();
-$subtree = $searchBST->subtreeWithVal($root, 2);
+$searchBST = new IncreasingOrderSearchTree();
+$subtree = $searchBST->increasingBST($root);
 print_r($subtree);
